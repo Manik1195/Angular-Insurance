@@ -1,0 +1,50 @@
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: #fff;
+  background: #0f5a97;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+.container {
+  display: flex;
+  margin-left: 20px;
+}
+.address {
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  /* box-shadow: 0px 0px 10px #c1c1c1; */
+  border: 1px solid #4a9fe4;
+  font-family: 'Lato';
+  animation: animate 0.8s;
+}
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.content {
+  display: flex;
+  margin-left: 25px;
+  color: #0f5a97;
+}
+.content label {
+  width: 80px;
+  color: #444;
+  font-family: 'Raleway';
+}
+select {
+  padding: 10px;
+  margin-top: 20px;
+}

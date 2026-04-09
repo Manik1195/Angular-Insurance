@@ -1,0 +1,46 @@
+<table class="policy-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Mobile</th>
+      <th>Policy Type</th>
+      <th>Sum Assured</th>
+      <th>Premium</th>
+      <th>Mode</th>
+      <th>Nominees</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (policy of policies(); track policy.id; let i = $index) {
+      <tr>
+        <td>{{ policy.customer.name }}</td>
+        <td>{{ policy.customer.age }}</td>
+        <td>{{ policy.customer.mobile }}</td>
+        <td>{{ policy.policy.type }}</td>
+        <td>{{ policy.policy.sumAssured }}</td>
+        <td>{{ policy.premium.amount }}</td>
+        <td>{{ policy.premium.mode }}</td>
+
+        <td>
+          @for (nominee of policy.nominees; track $index) {
+            <div>{{ nominee.nomineeName }} -{{ nominee.relation }}</div>
+          }
+        </td>
+        <td>
+          <button type="button" class="edit" (click)="Edit(policy.id)">
+            Edit <i class="bi bi-pencil-fill"></i>
+          </button>
+        </td>
+        <td>
+          <button type="button" class="delete" (click)="Delete(policy.id!)">
+            Delete <i class="bi bi-trash3-fill"></i>
+          </button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

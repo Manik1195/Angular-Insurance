@@ -1,0 +1,131 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    @if (currentStep() == 1) {
+      <div formGroupName="customer" class="form-group">
+        <h2>Customer Details</h2>
+        <div class="inputs">
+          <label>Name</label>
+          <input type="text" formControlName="name" placeholder="Enter name" />
+        </div>
+        @if (form.get('customer.name')?.touched && form.get('customer.name')?.invalid) {
+          <small class="error">Name field is required</small>
+        }
+        <div class="inputs">
+          <label>Age</label>
+          <input type="text" formControlName="age" placeholder=" Enter age" />
+        </div>
+        @if (form.get('customer.age')?.touched && form.get('customer.age')?.invalid) {
+          <small class="error">Age field is required</small>
+        }
+        <div class="inputs">
+          <label>Mobile</label>
+          <input type="text" formControlName="mobile" placeholder="Enter mobilenumber" />
+        </div>
+        @if (form.get('customer.mobile')?.touched && form.get('customer.mobile')?.invalid) {
+          <small class="error">Mobile field is required</small>
+        }
+      </div>
+    }
+    @if (currentStep() == 2) {
+      <div formGroupName="policy" class="form-group">
+        <h2>Policy Details</h2>
+        <div class="inputs">
+          <label>Type</label>
+          <select formControlName="type">
+            <option value="Select Policy Type">Select Policy Type</option>
+            <option value="Life">Life</option>
+            <option value="Health">Health</option>
+            <option value="Vehicle">Vehicle</option>
+          </select>
+        </div>
+        @if (form.get('policy.type')?.touched && form.get('policy.type')?.invalid) {
+          <small class="error">Type field is required</small>
+        }
+        <div class="inputs">
+          <label>Sum Assured</label>
+          <input type="number" formControlName="sumAssured" placeholder="Enter Sum Assured" />
+        </div>
+        @if (form.get('policy.sumAssured')?.touched && form.get('policy.sumAssured')?.invalid) {
+          <small class="error">SumAssured field is required</small>
+        }
+      </div>
+    }
+    @if (currentStep() == 3) {
+      <div class="form-array">
+        <div class="form-style">
+          <h2>Nominee Details</h2>
+          <button type="button" class="addnominee" (click)="addNominee()">+ Add Nominee</button>
+        </div>
+
+        <div formArrayName="nominees">
+          <div
+            *ngFor="let nominee of nominees.controls; let i = index"
+            [formGroupName]="i"
+            class="nominee-card"
+          >
+            <div class="inputs">
+              <label>Nominee Name</label>
+              <input type="text" formControlName="nomineeName" placeholder=" Enter Nominee name" />
+            </div>
+            @if (nominee.get('nomineeName')?.touched && nominee.get('nomineeName')?.invalid) {
+              <small class="error">nomineeName field is required</small>
+            }
+
+            <div class="inputs">
+              <label>Relation</label>
+              <input type="text" formControlName="relation" placeholder=" Enter Relation" />
+            </div>
+            @if (nominee.get('relation')?.touched && nominee.get('relation')?.invalid) {
+              <small class="error">Relation field is required</small>
+            }
+            <div class="remove">
+              <button type="button" class="removenominee" (click)="removeNominee(i)">
+                <i class="bi bi-trash-fill"></i> Remove
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+    @if (currentStep() == 4) {
+      <div formGroupName="premium" class="form-group">
+        <h2>Premium details</h2>
+        <div class="inputs">
+          <label>Premium amount</label>
+          <input type="number" formControlName="amount" placeholder="Enter Premium Amount" />
+        </div>
+        @if (form.get('premium.amount')?.touched && form.get('premium.amount')?.invalid) {
+          <small class="error">Amount field is required</small>
+        }
+        <div class="inputs">
+          <label>Mode</label>
+          <select formControlName="mode">
+            <option value="">Select Mode</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Quarterly">Quarterly</option>
+            <option value="Yearly">Yearly</option>
+          </select>
+        </div>
+        @if (form.get('premium.mode')?.touched && form.get('premium.mode')?.invalid) {
+          <small class="error">Mode field is required</small>
+        }
+      </div>
+    }
+    <!-- @if (currentStep() == 5) {
+      <h2>Review Policy</h2>
+
+      <pre>{{ policyform.value | json }}</pre>
+    } -->
+    <div class="step-buttons">
+      <button type="button" class="prev" (click)="prev()" *ngIf="currentStep() > 1">
+        <i class="bi bi-arrow-bar-left"></i> Previous
+      </button>
+      <button type="button" class="next" (click)="next()" *ngIf="currentStep() < 4">
+        Next <i class="bi bi-arrow-bar-right"></i>
+      </button>
+      <button type="submit" class="submit" *ngIf="currentStep() === 4">
+        Submit <i class="bi bi-send-fill"></i>
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,116 @@
+.container {
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 10px #c9c7c7;
+  width: 850px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #f5f6f7;
+}
+.form {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+
+  width: 500px;
+  padding: 50px;
+  font-family: sans-serif;
+
+  background-color: #f5f6f7;
+}
+.form h2 {
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+  letter-spacing: 1.2px;
+  font-family: 'Roboto';
+  color: #37474f;
+}
+.inputs {
+  gap: 20px;
+  display: flex;
+}
+input::placeholder {
+  color: #aeacac;
+  font-family: 'Lato';
+}
+.inputs input {
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+}
+.inputs label {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1.2px;
+  font-family: 'Lato';
+}
+input:focus {
+  transform: scale(1.03);
+  transition: 0.4s;
+  box-shadow: 0 0 10px #ffffff80;
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+.button button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #37474f;
+  color: #fff;
+  border-radius: 10px;
+}
+.button button:disabled {
+  background-color: #6a7174;
+}
+.error {
+  color: red;
+  margin-left: 120px;
+  margin-top: 10px;
+}
+.form-group {
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  /* align-items: center; */
+  margin-bottom: 40px;
+}
+.reg {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+  width: 350px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background: #fff;
+}
+.reg p {
+  margin: 0 auto;
+  font-family: 'Montserrat';
+  font-size: 12px;
+}
+.reg button {
+  padding: 5px;
+  border: none;
+  width: 150px;
+  color: #37474f;
+  margin: 0 auto;
+  border: 2px solid #37474f;
+  background-color: #fff;
+}
+.reg button:hover {
+  background-color: #37474f;
+  transition: 0.6s;
+  color: #fff;
+}

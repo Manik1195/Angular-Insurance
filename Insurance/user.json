@@ -1,0 +1,26 @@
+{
+  "Users": [
+    {},
+    {
+      "id": 1,
+      "name": "Manik",
+      "email": "immanik110495@gmail.com",
+      "password": "Immanik",
+      "mobilenumber": 9360507474
+    },
+    {
+      "id": 2,
+      "name": "Sivs",
+      "email": "Sivs@gmail.com",
+      "password": "Sivs123",
+      "mobilenumber": 9360507272
+    },
+    {
+      "id": 3,
+      "name": "Vishwa",
+      "email": "Vishwa@gmail.com",
+      "password": "Vishwa123",
+      "mobilenumber": 8778008760
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<div class="container">
+     <div class="form">
+      <h2>Login</h2>
+   
+    <form [formGroup]="loginform" (ngSubmit)="submit()">
+        <div class="form-group">
+        <div class="inputs">
+            <label>Username</label>
+            <input type="text" placeholder="Enter username" formControlName="username"/>
+        </div>
+        @if(loginform.controls['username']?.dirty || loginform.controls['username']?.touched){
+            @if(loginform.controls['username']?.errors?.['required']){
+                <small class="error">The username field is required</small>
+            }
+        }
+        </div>
+        <div class="form-group">
+        <div class="inputs">
+            <label>Password</label>
+            <input type="password" placeholder="Enter password" formControlName="password">
+        </div>
+         @if(loginform.controls['password']?.dirty || loginform.controls['password']?.touched){
+            @if(loginform.controls['password']?.errors?.['required']){
+                <small class="error">The password field is required</small>
+            }
+            @if(loginform.controls['password']?.errors?.['minlength']){
+                <small class="error">The password should contains atleast 6 characters</small>
+            }
+        }
+        </div>
+        <div class="button">
+            <button type="submit" [disabled]="loginform.invalid">Submit</button>
+
+        </div>
+    </form>
+    </div>
+    <div class="reg">
+        <p>Are You new to this site,Then Register</p>
+        <button (click)="register()">Register</button>
+    </div>
+</div>

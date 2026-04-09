@@ -1,0 +1,16 @@
+@if (token() != null) {
+  <div class="nav">
+    <div>
+      <ul>
+        <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
+        <li><a routerLinkActive="active" routerLink="/policy">Policy</a></li>
+        <li><a routerLinkActive="active" routerLink="/heading">Heading</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <button class="btn" (click)="logout()">Logout</button>
+    </div>
+  </div>
+}
+<router-outlet></router-outlet>

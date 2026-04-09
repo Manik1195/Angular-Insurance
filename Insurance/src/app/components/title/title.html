@@ -1,0 +1,26 @@
+<p>{{ user.id }}</p>
+<p>{{ user.name }}</p>
+<h2>{{ names }}</h2>
+<h2>{{ msg }}</h2>
+<div class="container">
+  <div class="buttons">
+    <button type="button" class="one" (click)="one()">Name</button>
+    <button type="button" class="two" (click)="two()">email</button>
+    <button type="button" class="three" (click)="three()">mobile</button>
+    <button type="button" class="four" (click)="four()">age</button>
+  </div>
+  <div class="content">
+    @if (value === 1) {
+      <img src="assets/one.jfif" />
+    }
+    @if (value === 2) {
+      <img src="assets/two.jfif" />
+    }
+    @if (value === 3) {
+      <img src="assets/three.jfif" />
+    }
+    @if (value === 4) {
+      <img src="assets/four.jpg" />
+    }
+  </div>
+</div>

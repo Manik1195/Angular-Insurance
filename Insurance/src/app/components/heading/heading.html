@@ -1,0 +1,26 @@
+<select>
+  @for (user of apiUser(); track user.id) {
+    <option>{{ user.email }}</option>
+  }
+</select>
+<div class="container">
+  <button type="button" class="btn" (click)="Submit()">Address</button>
+</div>
+@if (click()) {
+  <div class="address">
+    <div class="content">
+      <label>Street</label>
+      <p>{{ address().street }}</p>
+    </div>
+    <div class="content">
+      <label>Suite</label>
+      <p>{{ address().suite }}</p>
+    </div>
+    <div class="content">
+      <label>City</label>
+      <p>{{ address().city }}</p>
+    </div>
+  </div>
+}
+
+<app-title [user]="user" [names]="names" [msg]="msg" (success)="submit($event)"></app-title>

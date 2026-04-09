@@ -1,0 +1,122 @@
+{
+  "Policies": [
+    {
+      "customer": {
+        "name": "Manik",
+        "age": 30,
+        "mobile": 9360507474
+      },
+      "policy": {
+        "type": "Health",
+        "sumAssured": 100000
+      },
+      "nominees": [
+        {
+          "nomineeName": "Uma",
+          "relation": "Mother"
+        }
+      ],
+      "premium": {
+        "amount": 100000,
+        "mode": "Yearly"
+      },
+      "id": 1
+    },
+    {
+      "customer": {
+        "name": "Sooriya Meenakshi",
+        "age": 27,
+        "mobile": 9360507474
+      },
+      "policy": {
+        "type": "Life",
+        "sumAssured": 150000
+      },
+      "nominees": [
+        {
+          "nomineeName": "Uma",
+          "relation": "Mother"
+        },
+        {
+          "nomineeName": "Bhargav",
+          "relation": "Son"
+        }
+      ],
+      "premium": {
+        "amount": 150000,
+        "mode": "Yearly"
+      },
+      "id": 2
+    },
+    {
+      "customer": {
+        "name": "Uma",
+        "age": 50,
+        "mobile": 8778008770
+      },
+      "policy": {
+        "type": "Health",
+        "sumAssured": 100000
+      },
+      "nominees": [
+        {
+          "nomineeName": "Bhargav",
+          "relation": "Grand son"
+        }
+      ],
+      "premium": {
+        "amount": 100000,
+        "mode": "Yearly"
+      },
+      "id": 3
+    },
+    {
+      "customer": {
+        "name": "Mega",
+        "age": 30,
+        "mobile": 9715603188
+      },
+      "policy": {
+        "type": "Life",
+        "sumAssured": 200000
+      },
+      "nominees": [
+        {
+          "nomineeName": "Mega Son",
+          "relation": "Son"
+        }
+      ],
+      "premium": {
+        "amount": 200000,
+        "mode": "Yearly"
+      },
+      "id": 4
+    },
+    {
+      "customer": {
+        "name": "Sivs",
+        "age": 34,
+        "mobile": 9360507272
+      },
+      "policy": {
+        "type": "Health",
+        "sumAssured": 100000
+      },
+      "nominees": [
+        {
+          "nomineeName": "Sivs mom",
+          "relation": "Mom"
+        },
+        {
+          "nomineeName": "Sivs dad",
+          "relation": "Dad"
+        }
+      ],
+      "premium": {
+        "amount": 100000,
+        "mode": "Yearly"
+      },
+      "id": 5
+    }
+  ]
+}
